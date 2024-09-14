@@ -1,0 +1,14 @@
+{
+  "DishCard": {
+    "Easy": "Легка",
+    "Hard": "Важка",
+    "Medium": "Середня"
+  },
+  "Header": {
+    "All recipes": "Усі рецепти",
+    "Sign in": "Вхід",
+    "Add recipe": "Додати рецепт",
+    "Home": "Головна",
+    "My recipes": "Мої рецепти"
+  }
+}

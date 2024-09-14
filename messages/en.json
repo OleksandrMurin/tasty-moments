@@ -1,0 +1,14 @@
+{
+  "DishCard": {
+    "Easy": "Easy",
+    "Medium": "Medium",
+    "Hard": "Hard"
+  },
+  "Header": {
+    "All recipes": "All recipes",
+    "My recipes": "My recipes",
+    "Add recipe": "Add recipe",
+    "Home": "Home",
+    "Sign in": "Sign in"
+  }
+}
