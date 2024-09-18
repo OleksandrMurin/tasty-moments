@@ -22,7 +22,7 @@ const config: Config = {
         'cream200':'#FFF8ED',
         'cream400':'#FFF5E4',
         'cream600':'#F3DDB8',
-        'cold-grey200':'#E1EBE7',
+        'cold-grey200':'#B7C8C2',
         'cold-grey400':'#8DA19A',
         'cold-grey600':'#202523',
         'warm-grey200':'#CCC7C3',

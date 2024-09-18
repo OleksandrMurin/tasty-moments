@@ -1,6 +1,7 @@
 import { Lato } from "next/font/google";
 import "./globals.css";
 import Header from "../../components/Header";
+import Footer from "@/components/Footer";
 import { ReactNode } from "react";
 import "../../i18n/i18n";
 import { getMessages } from "next-intl/server";
@@ -39,6 +40,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <Header></Header>
           <div>{children}</div>
+          <Footer></Footer>
         </NextIntlClientProvider>
       </body>
     </html>
