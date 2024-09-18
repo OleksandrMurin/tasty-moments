@@ -14,7 +14,7 @@ const Header = ({ params }: any) => {
 
   return (
     <header className="bg-black text-cream400 opacity-60 fixed w-full top-0 left-0 right-0 z-50">
-      <div className="container flex items-center justify-between h-[72px]">
+      <div className="container flex items-center justify-between h-[72px] ">
         <Logo />
         <nav className="flex items-center justify-between gap-7 uppercase text-xl">
           <Link

@@ -1,10 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-* {
-  margin: 0;
-  padding: 0;
-}
+
 
 body{
   background: #c8c6c6;
@@ -45,8 +42,16 @@ body{
 
 .container {
   max-width: 1440px;
-  margin: 0 auto;
+  margin: auto;
   padding: 0 80px;
+}
+
+.footer-container {
+  height: auto;
+  max-width: 1440px;
+  margin: auto;
+  padding-right: 80px;
+  padding-left: 80px;
 }
 
 .post {
@@ -70,3 +75,4 @@ body{
 .post a {
   color: #cb2222;
 }
+
