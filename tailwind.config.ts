@@ -30,12 +30,18 @@ const config: Config = {
         'warm-grey600':'#282624',
         'green': '#48CC54',
         'red': '#E71D35',
+        
+
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "hero-img": "url('/hero-img.png')"
+        "hero-img": "url('/hero-img.png')",
+        'gradient-1': 'linear-gradient(239deg, #F28738 -15.88%, #CD5C08 95.28%)',
+        'gradient-2': 'linear-gradient(140deg, #E1FAE3 -8.21%, #6E9371 119.15%)',
+        'gradient-3': 'linear-gradient(212deg, #9AC6B5 2.39%, #30624F 129.28%)',
+        'gradient-4': 'linear-gradient(156deg, #F3DDB8 3.19%, #FFF8ED 125.24%)',
       },
     },
   },

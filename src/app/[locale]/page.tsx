@@ -1,22 +1,12 @@
-import DishCard, { Dish } from "@/components/dish-card";
-import HeroSection from "@/components/hero-section";
+import DishCard, { Recipe } from "@/components/DishCard";
+import HeroSection from "@/components/HeroSection";
+import PopularRecipeSection from "@/components/PopularRecipeSection";
+import SecondSection from "@/components/SecondSection";
 import { Link } from "@/i18n/routing";
 
-type PostType = {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-};
-
-async function fetchData(): Promise<PostType[]> {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const result = await res.json();
-  return result;
-}
-
 export default async function Home() {
-  const dish: Dish = {
+  const dish: Recipe = {
+    id: "1",
     title: "Praesentium dolorem porro dolorem porro",
     image: "",
     difficulty: 1,
@@ -24,22 +14,12 @@ export default async function Home() {
     avgCookingTime: 30,
     isLiked: false,
   };
-  const posts = await fetchData();
+
   return (
     <div>
-      <div className="grid grid-cols-12 gap-6 mx-20">
-        <DishCard dish={dish} />
-        <DishCard dish={dish} />
-        <DishCard dish={dish} />
-      </div>
-
-      {/* {posts.map((posts) => (
-        <div key={posts.id} className="post">
-          <h2>title: {posts.title}</h2>
-          <p>body: {posts.body}</p>
-          <Link href={"/post/" + posts.id}>Details</Link>
-        </div>
-      ))} */}
+      <HeroSection />
+      <SecondSection />
+      <PopularRecipeSection />
     </div>
   );
 }

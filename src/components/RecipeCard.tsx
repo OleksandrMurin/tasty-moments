@@ -1,15 +1,22 @@
-import React from "react";
+import React, { ComponentPropsWithoutRef, FC } from "react";
+import { getLocale } from "next-intl/server";
+import { useFormatter } from "next-intl";
 import { Lora } from "next/font/google";
 import Image from "next/image";
 import logo from "../../public/pngtree-picture-of-a-blue-bird-on-a-black-background-image_2937385.jpg";
 import Like from "../../public/favorite-icon.svg";
-import StarIcon from "../../public/star-icon.svg";
+import StarIcon from "../../public/star-icon-blank.svg";
 import DifficultyIcon from "../../public/difficulty-level-icon.svg";
 import TimeIkon from "../../public/time-icon.svg";
 import classNames from "classnames";
 import { useTranslations } from "next-intl";
-interface DishCardProps {
-  dish: Dish;
+import { Recipe } from "@/types/Recipe";
+import dayjs from "dayjs";
+import duration from "dayjs/plugin/duration"; // ES 2015
+import { getDayjsLocale } from "@/utils/dayjs";
+
+interface RecipeCardProps extends ComponentPropsWithoutRef<"div"> {
+  recipe: Recipe;
 }
 const lora = Lora({
   subsets: ["latin", "cyrillic"],
@@ -17,18 +24,16 @@ const lora = Lora({
   style: ["normal", "italic"],
   display: "swap",
 });
-export interface Dish {
-  title: string;
-  image: string;
-  difficulty: number;
-  rating: number;
-  avgCookingTime: number;
-  isLiked: boolean;
-}
 
-function DishCard({ dish }: DishCardProps) {
+export const RecipeCard: FC<RecipeCardProps> = async ({
+  recipe,
+  className,
+}) => {
   const t = useTranslations("DishCard");
-  const { difficulty, avgCookingTime, rating, title, isLiked, image } = dish;
+  const locale = await getLocale();
+  const { difficulty, avgCookingTime, rating, title, isLiked, image } = recipe;
+  const dateTime = dayjs.duration(avgCookingTime).locale(locale).humanize();
+
   function getDifficulty(difficulty: number) {
     const difficulties = {
       1: t("Easy"),
@@ -40,7 +45,7 @@ function DishCard({ dish }: DishCardProps) {
     return difficulties[2];
   }
   return (
-    <div className={classNames("col-span-4 bg-cream400 rounded shadow-lg")}>
+    <div className={classNames(" bg-cream400 rounded shadow-lg", className)}>
       <Image
         src={logo}
         alt="Picture of the author"
@@ -77,15 +82,15 @@ function DishCard({ dish }: DishCardProps) {
       >
         <div className="flex flex-row items-center gap-2">
           <StarIcon />
-          <span className="text-black">{rating}</span>
+          <span className="text-black">
+            {rating.value} {rating.count}
+          </span>
         </div>
         <div className="flex flex-row items-center gap-2">
           <TimeIkon />
-          <span className="text-black">{avgCookingTime}</span>
+          <span className="text-black">{dateTime}</span>
         </div>
       </div>
     </div>
   );
-}
-
-export default DishCard;
+};

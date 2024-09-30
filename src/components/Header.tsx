@@ -8,6 +8,7 @@ import { Link } from "@/i18n/routing";
 import Logo from "../../public/logo.svg";
 import LoginIcon from "../../public/login-icon.svg";
 import Like from "../../public/like.svg";
+import AddRecipeBTN from "./AddRecipeBTN";
 
 const Header = ({ params }: any) => {
   const t = useTranslations("Header");
@@ -17,12 +18,7 @@ const Header = ({ params }: any) => {
       <div className="container flex items-center justify-between h-[72px] ">
         <Logo />
         <nav className="flex items-center justify-between gap-7 uppercase text-xl">
-          <Link
-            href={`/`}
-            className="py-2 px-4 bg-cream200 text-orange400 rounded"
-          >
-            {t("Add recipe")}
-          </Link>
+          <AddRecipeBTN size="md" />
           <Link href={`/`} className="custom-border">
             {t("Home")}
           </Link>

@@ -13,5 +13,11 @@
     "Go on top": "Go on top",
     "Favorites": "Favorites",
     "Contact us": "Contact us"
+  },
+  "Recipe": {
+    "Difficulty": "Difficulty",
+    "Title": "Title",
+    "Rating": "Rating",
+    "Date": "Date"
   }
 }

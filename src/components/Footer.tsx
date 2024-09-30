@@ -4,6 +4,7 @@ import { Link } from "@/i18n/routing";
 import Logo from "../../public/logo-black.svg";
 import LoginIcon from "../../public/log-out-icon-black.svg";
 import ArrowUp from "../../public/arrow-up.svg";
+import AddRecipeBTN from "./AddRecipeBTN";
 
 const Footer = () => {
   const t = useTranslations("Header");
@@ -13,12 +14,7 @@ const Footer = () => {
         <div className="mt-14 mb-8  flex items-center justify-between h-10 ">
           <Logo />
           <nav className="flex items-center justify-between gap-7 uppercase text-base">
-            <Link
-              href={`/`}
-              className="py-2 px-4 bg-cream200 text-orange400 rounded"
-            >
-              {t("Add recipe")}
-            </Link>
+            <AddRecipeBTN size="sm" />
             <Link href="/recipes">{t("All recipes")}</Link>
             <Link href="/my_recipes">{t("My recipes")}</Link>
             <Link href="/favorites">{t("Favorites")}</Link>
