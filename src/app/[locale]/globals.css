@@ -34,12 +34,6 @@ body{
   height: 3px;
   display:block;
 }
-.swiper-after:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-prev)::after {
-  @apply top-0 h-full w-full bg-black opacity-65 rounded-lg;
-}
-.swiper-after {
-  @apply after:z-30 after:absolute after:transition-colors after:duration-500;
-}
 
 .header a{
   margin: 20px;
@@ -100,15 +94,6 @@ body{
   background-size: cover;
 }
 
-.swiper-next-button,
-.swiper-prev-button {
-  background-color: white;
-  padding: 10px;
-  border-radius: 8px;
-  opacity: 80%;
-  position: absolute;
-  z-index: 1000;
-}
 
 .third-section-divider::before {
   content:"";

@@ -1,0 +1,18 @@
+.swiperAfter:not(:global .swiper-slide-active, .swiper-slide-next, .swiper-slide-prev)::after {
+    @apply top-0 h-full w-full bg-black opacity-65 rounded-lg;
+}
+
+.swiperAfter {
+    @apply after:z-30 after:absolute after:transition-colors after:duration-500;
+}
+
+
+.swiperButton {
+    top: 50%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    opacity: 80%;
+    position: absolute;
+    z-index: 1000;
+}

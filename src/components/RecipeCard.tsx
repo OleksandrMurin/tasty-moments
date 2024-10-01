@@ -12,11 +12,9 @@ import classNames from "classnames";
 import { useTranslations } from "next-intl";
 import { Recipe } from "@/types/Recipe";
 import dayjs from "dayjs";
-import duration from "dayjs/plugin/duration"; // ES 2015
-import { getDayjsLocale } from "@/utils/dayjs";
 
 interface RecipeCardProps extends ComponentPropsWithoutRef<"div"> {
-  recipe: Recipe;
+  recipe: Recipe
 }
 const lora = Lora({
   subsets: ["latin", "cyrillic"],
@@ -25,10 +23,7 @@ const lora = Lora({
   display: "swap",
 });
 
-export const RecipeCard: FC<RecipeCardProps> = async ({
-  recipe,
-  className,
-}) => {
+export const RecipeCard: FC<RecipeCardProps> = async ({recipe,  className }) => {
   const t = useTranslations("DishCard");
   const locale = await getLocale();
   const { difficulty, avgCookingTime, rating, title, isLiked, image } = recipe;
