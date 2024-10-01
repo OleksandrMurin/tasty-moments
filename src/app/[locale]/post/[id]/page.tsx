@@ -1,4 +1,5 @@
 import PostPage from "@/components/PostPage";
+import {FC} from "react";
 
 
 interface PostProps {
@@ -8,17 +9,18 @@ interface PostProps {
   body: string;
 }
 
-async function fetchData(id : string): Promise<PostProps> {
+const fetchData = async (id : string): Promise<PostProps> => {
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
-    const result = await res.json();
-    return result;
-  }
+    return await res.json();
+  };
 
-const Post = async ({params} : {params :{id: string}}) => {
+interface Props {
+    params: { id: string };
+}
+
+const Post : FC<Props> = async ({params}) => {
     const post = await fetchData(params.id);
-  return (
-    <PostPage post={post}/>
-  )
+  return <PostPage post={post}/>
 }
 
 export default Post

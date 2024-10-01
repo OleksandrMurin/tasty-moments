@@ -1,9 +1,7 @@
 import React from 'react'
 
-function Account() {
-  return (
+const Account = () => (
     <div>Account</div>
-  )
-}
+);
 
 export default Account

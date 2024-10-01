@@ -1,4 +1,4 @@
-import React from "react";
+import React, {FC} from "react";
 import {Swiper} from "./swiper/Swiper";
 import {RecipeCard} from "./RecipeCard";
 import Star from "../../public/star-icon.svg";
@@ -6,10 +6,10 @@ import {prompt} from "@/fonts/PromptFont";
 import classNames from "classnames";
 import {Recipe} from "@/types/Recipe";
 import {PageModel} from "@/types/PageModel";
-import SortBar from "./SortBar";
+import {SortBar} from "./SortBar";
 import {connectionString} from "@/constants/api";
 
-const PopularRecipeSection = async () => {
+export const PopularRecipeSection : FC = async () => {
     const fetchPopRecipes = async (): Promise<PageModel<Recipe>> => {
         const res = await fetch(
             `${connectionString}/recipe?page=0&diff.min=0&diff.max=4&size=20&sort=difficulty`,
@@ -35,5 +35,3 @@ const PopularRecipeSection = async () => {
         </div>
     );
 };
-
-export default PopularRecipeSection;

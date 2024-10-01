@@ -1,14 +1,14 @@
-import React, { ButtonHTMLAttributes, FC } from "react";
-import { useTranslations } from "next-intl";
-import { lato } from "../fonts/LatoFont";
+import React, {ButtonHTMLAttributes, FC} from "react";
+import {useTranslations} from "next-intl";
+import {lato} from "@/fonts/LatoFont";
 import classNames from "classnames";
 
-interface BTNProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary";
   size?: "sm" | "md" | "lg";
 }
 
-const AddRecipeBTN: FC<BTNProps> = ({ variant = "secondary", size = "md" }) => {
+export const AddRecipeButton: FC<Props> = ({ variant = "secondary", size = "md" }) => {
   const t = useTranslations("Header");
   return (
     <button
@@ -28,5 +28,3 @@ const AddRecipeBTN: FC<BTNProps> = ({ variant = "secondary", size = "md" }) => {
     </button>
   );
 };
-
-export default AddRecipeBTN;

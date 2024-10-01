@@ -11,23 +11,23 @@
   "dependencies": {
     "classnames": "^2.5.1",
     "dayjs": "^1.11.13",
-    "next": "14.2.7",
-    "next-intl": "^3.19.0",
-    "react": "^18",
-    "react-dom": "^18",
+    "next": "14.2.13",
+    "next-intl": "^3.20.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-select": "^5.8.1",
     "swiper": "^11.1.14"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.7",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "@types/node": "^22.7.4",
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^9.11.1",
+    "eslint-config-next": "14.2.13",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2"
   },
   "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1"
 }

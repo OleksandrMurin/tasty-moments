@@ -9,20 +9,12 @@ body{
   overflow-x: hidden;
 }
 
-.header{
-  display: flex;
-  justify-content: space-around;
-  background-color: black;
-  border-bottom: 2px solid #2c2c2c;
-  padding: 20px 50px;
-}
 .custom-border {
   border-image: url(/like.svg);
   border: 10px solid transparent;
   position: relative;
-
-
 }
+
 .custom-border::after {
   content: "" ;
   background: url(/border-headder.svg) no-repeat;
@@ -74,13 +66,6 @@ body{
 
 .post a {
   color: #cb2222;
-}
-
-.gradient{
-  font-size: 72px;
-  background: linear-gradient(156deg, #F3DDB8 3.19%, #FFF8ED 125.24%);
-  background-clip: text;
-  color: transparent;
 }
 
 .second-section-divider::before {

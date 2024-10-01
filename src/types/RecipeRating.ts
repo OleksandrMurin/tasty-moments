@@ -1,4 +1,4 @@
 export interface RecipeRating {
-    value: any,
+    value: number | null,
     count: number
 }

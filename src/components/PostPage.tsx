@@ -1,5 +1,4 @@
-
-import { Link } from '@/i18n/routing';
+import {Link} from '@/i18n/routing';
 import React from 'react'
 
 interface PostType {

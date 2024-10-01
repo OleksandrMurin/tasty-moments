@@ -5,8 +5,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import {Pagination} from "swiper/modules";
-import ArrowLeft from "../../../public/arrow-left.svg";
 import ArrowRight from "../../../public/arrow-right.svg";
+import ArrowLeft from "../../../public/arrow-left.svg";
 import styles from './Swiper.module.css'
 import classNames from "classnames";
 
@@ -14,12 +14,10 @@ interface SliderProps {
     slides: ReactNode[];
 }
 
+const element = (slide: ReactNode, index: number) => <SwiperSlide key={index} className={styles.swiperAfter}>{slide}</SwiperSlide>;
+
 export const Swiper: FC<SliderProps> = ({slides}) => {
-    const mapFunc = useCallback(
-        (slide: ReactNode, index: number) => <SwiperSlide key={index} className={styles.swiperAfter}>{slide}</SwiperSlide>,
-        []
-    )
-    const children = useMemo(() => slides.map(mapFunc), [slides, mapFunc])
+    const children = useMemo(() => slides.map(element), [slides])
 
     return <SwiperComponent
         modules={[Pagination]}
@@ -31,25 +29,14 @@ export const Swiper: FC<SliderProps> = ({slides}) => {
         className="flex justify-center w-full relative pb-28"
         onInit={swiper => swiper.slideToLoop(0, 0)}
     >
-        {children}
         <PrevButton className={classNames(styles.swiperButton, "left-2")} length={slides.length}/>
+        {children}
         <NextButton className={classNames(styles.swiperButton, "right-2")} length={slides.length}/>
     </SwiperComponent>;
 };
 
 type NavButtonProps = ComponentPropsWithoutRef<"div"> & {
     length: number
-}
-
-const PrevButton: FC<NavButtonProps> = ({className, length}) => {
-    const swiper = useSwiper()
-    const onClick = useCallback(
-        () => swiper.slideToLoop((swiper.realIndex + length - 1) % length, 500),
-        [length, swiper]
-    );
-    return <div onClick={onClick} className={className}>
-        <ArrowLeft/>
-    </div>
 }
 
 const NextButton: FC<NavButtonProps> = ({className, length}) => {
@@ -60,5 +47,16 @@ const NextButton: FC<NavButtonProps> = ({className, length}) => {
     );
     return <div onClick={onClick} className={className}>
         <ArrowRight/>
+    </div>
+}
+
+const PrevButton: FC<NavButtonProps> = ({className, length}) => {
+    const swiper = useSwiper()
+    const onClick = useCallback(
+        () => swiper.slideToLoop((swiper.realIndex + length - 1) % length, 500),
+        [length, swiper]
+    );
+    return <div onClick={onClick} className={className}>
+        <ArrowLeft/>
     </div>
 }

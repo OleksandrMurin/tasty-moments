@@ -1,4 +1,4 @@
-import { ResponsePage } from "./ResponsePage";
+import {ResponsePage} from "./ResponsePage";
 
 export interface PageModel<T> {
     content: T[],

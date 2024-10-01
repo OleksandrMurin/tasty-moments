@@ -1,16 +1,12 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-
-import LanguageSwitcher from "./LanguageSwitcher";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import React, {FC} from "react";
+import {useTranslations} from "next-intl";
+import {Link} from "@/i18n/routing";
 import Logo from "../../public/logo.svg";
 import LoginIcon from "../../public/login-icon.svg";
 import Like from "../../public/like.svg";
-import AddRecipeBTN from "./AddRecipeBTN";
+import {AddRecipeButton} from "./AddRecipeButton";
 
-const Header = ({ params }: any) => {
+const Header : FC = () => {
   const t = useTranslations("Header");
 
   return (
@@ -18,8 +14,8 @@ const Header = ({ params }: any) => {
       <div className="container flex items-center justify-between h-[72px] ">
         <Logo />
         <nav className="flex items-center justify-between gap-7 uppercase text-xl">
-          <AddRecipeBTN size="md" />
-          <Link href={`/`} className="custom-border">
+          <AddRecipeButton size="md" />
+          <Link href="/" className="custom-border">
             {t("Home")}
           </Link>
           <Link href="/recipes">{t("All recipes")}</Link>
@@ -28,7 +24,7 @@ const Header = ({ params }: any) => {
         <div className="flex items-center justify-between">
           <Like className="m-2" />
           <LoginIcon className="m-2" />
-          <Link href={`/`} className="uppercase text-xl">
+          <Link href="/" className="uppercase text-xl">
             {t("Sign in")}
           </Link>
         </div>

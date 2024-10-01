@@ -1,12 +1,12 @@
-import React from "react";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import React, {FC} from "react";
+import {useTranslations} from "next-intl";
+import {Link} from "@/i18n/routing";
 import Logo from "../../public/logo-black.svg";
 import LoginIcon from "../../public/log-out-icon-black.svg";
 import ArrowUp from "../../public/arrow-up.svg";
-import AddRecipeBTN from "./AddRecipeBTN";
+import {AddRecipeButton} from "./AddRecipeButton";
 
-const Footer = () => {
+const Footer : FC = () => {
   const t = useTranslations("Header");
   return (
     <div className="h-64 bg-sage200">
@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="mt-14 mb-8  flex items-center justify-between h-10 ">
           <Logo />
           <nav className="flex items-center justify-between gap-7 uppercase text-base">
-            <AddRecipeBTN size="sm" />
+            <AddRecipeButton size="sm" />
             <Link href="/recipes">{t("All recipes")}</Link>
             <Link href="/my_recipes">{t("My recipes")}</Link>
             <Link href="/favorites">{t("Favorites")}</Link>

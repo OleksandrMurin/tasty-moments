@@ -1,19 +1,18 @@
 import classNames from "classnames";
-import Image from "next/image";
-import React, { ComponentPropsWithoutRef, FC, ReactNode } from "react";
-import { lora } from "@/fonts/LoraFont";
+import React, {ComponentPropsWithoutRef, FC, ReactNode} from "react";
+import {lora} from "@/fonts/LoraFont";
 
-interface SSCardProps extends ComponentPropsWithoutRef<"div"> {
-  card: SSCardInterface;
+interface Props extends ComponentPropsWithoutRef<"div"> {
+  card: SecondSectionCardType;
 }
 
-export interface SSCardInterface {
+export interface SecondSectionCardType {
   description: ReactNode;
   color: string;
   icon: ReactNode;
 }
 
-const SSCard: FC<SSCardProps> = ({ card, className }) => {
+export const SecondSectionType: FC<Props> = ({ card, className }) => {
   return (
     <div
       className={classNames(
@@ -34,5 +33,3 @@ const SSCard: FC<SSCardProps> = ({ card, className }) => {
     </div>
   );
 };
-
-export default SSCard;

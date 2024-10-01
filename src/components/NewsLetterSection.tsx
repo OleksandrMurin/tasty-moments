@@ -1,7 +1,3 @@
-import React from "react";
+import React, {FC} from "react";
 
-const NewsLetterSection = () => {
-  return <div>NewsLetterSection</div>;
-};
-
-export default NewsLetterSection;
+export const NewsLetterSection : FC = () => <div>NewsLetterSection</div>;

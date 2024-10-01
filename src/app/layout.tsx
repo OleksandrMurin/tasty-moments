@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
+import {FC, ReactNode} from "react";
 
-export default function RootLayout({children}: Readonly<{children: ReactNode}>){
-    return children;
-}
+const RootLayout: FC<Readonly<{ children: ReactNode }>> = ({children}) => children;
+
+export default RootLayout
