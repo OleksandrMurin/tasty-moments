@@ -72,21 +72,25 @@ body{
   content:"";
   position: absolute;
   top: 0;
-  height: 270px;
-  transform: translateY(-100%);
+  padding: 0;
+  transform: translateY(-99%);
   width: 100%;
   background: url(/dashed-line.png) no-repeat ;
-  background-size: cover;
+  background-position: bottom;
+  background-size: contain;
+  aspect-ratio: 72/11;
 }
 
 
 .third-section-divider::before {
   content:"";
   position: absolute;
-  top: 1px;
-  height: 270px;
-  transform: translateY(-100%);
+  top: 0;
+  padding: 0;
+  transform: translateY(-99%);
   width: 100%;
   background: url(/dividerSecond.png) no-repeat ;
-  background-size: cover;
+  background-position: bottom;
+  background-size: contain;
+  aspect-ratio: 1440/277;
 }

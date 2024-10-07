@@ -13,5 +13,11 @@
     "Go on top": "Повернутися догори",
     "Contact us": "Контакти",
     "Favorites": "Обране"
+  },
+  "Recipe": {
+    "Difficulty": "Складність",
+    "Title": "Назва",
+    "Rating": "Оцінка",
+    "Date": "Дата"
   }
 }

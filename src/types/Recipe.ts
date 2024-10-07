@@ -5,7 +5,8 @@ export interface Recipe {
     title: string;
     image: string;
     difficulty: number;
-    rating: RecipeRating;
+    rating: number;
+    rated: number;
     avgCookingTime: string;
     isLiked: boolean;
   }

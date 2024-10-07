@@ -1,12 +1,12 @@
 import React from "react";
-import {SecondSectionType, SecondSectionCardType} from "./SecondSectionType";
+import { SecondSectionType, SecondSectionCardType } from "./SecondSectionType";
 import SSIcon1 from "../../public/SSIcon1.svg";
 import SSIcon2 from "../../public/SSIcon2.svg";
 import SSIcon3 from "../../public/SSIcon3.svg";
 import SSIcon4 from "../../public/SSIcon4.svg";
 import classNames from "classnames";
-import {AddRecipeButton} from "./AddRecipeButton";
-import {prompt} from "@/fonts/PromptFont";
+import { AddRecipeButton } from "./AddRecipeButton";
+import { prompt } from "@/fonts/PromptFont";
 
 // TODO: convert to array
 export const SecondSection = () => {
@@ -15,7 +15,8 @@ export const SecondSection = () => {
     description: (
       <>
         Start adding recipe by clicking{" "}
-        <AddRecipeButton size="md" variant="primary" className="py-4" /> <br></br>
+        <AddRecipeButton size="md" variant="primary" className="py-4" />{" "}
+        <br></br>
         button.
       </>
     ),
@@ -51,7 +52,7 @@ export const SecondSection = () => {
     color: "",
   };
   return (
-    <div className="bg-cream400 second-section-divider relative pb-[450px]">
+    <div className="bg-cream400 second-section-divider relative pt-14 pb-[450px]">
       <h1
         className={classNames(
           "text-center font-semibold text-teal400 text-5xl",
