@@ -4,10 +4,10 @@ import { prompt } from "@/fonts/PromptFont";
 import classNames from "classnames";
 import Image from "next/image";
 import React, { FC } from "react";
-import { OrangeButton } from "./OrangeButton";
+import { Button } from "../controls/buttons/OrangeButton";
 
 export const NewsLetterSection: FC = () => (
-  <div className="flex flex-row justify-between bg-cream400">
+  <div className="flex flex-row justify-between bg-cream400 relative fourth-section-divider">
     <div className="pt-80 pr-[133px] pl-20 flex-col">
       <h3
         className={classNames(
@@ -38,9 +38,12 @@ export const NewsLetterSection: FC = () => (
         <input
           type="email"
           placeholder="Enter your email"
-          className="h-14 border-[1px] rounded-l-md border-warm-grey200 text-xl w-2/3 text-left px-4"
+          className="h-14 border outline-none rounded-l-md border-warm-grey200 text-xl w-2/3 text-left px-4 focus:border-orange200 focus:border-r-0"
         ></input>
-        <OrangeButton className="rounded-r-md" />
+        <Button className="rounded-r-md" colorIntensity="200">
+          {" "}
+          Join
+        </Button>
       </div>
     </div>
     <Image

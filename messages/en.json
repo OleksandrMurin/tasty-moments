@@ -19,5 +19,8 @@
     "Title": "Title",
     "Rating": "Rating",
     "Date": "Date"
+  },
+  "SortBar": {
+    "Sort by": "Sort by"
   }
 }

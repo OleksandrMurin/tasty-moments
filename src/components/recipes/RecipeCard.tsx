@@ -3,16 +3,16 @@ import { getLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { Lora } from "next/font/google";
 import Image from "next/image";
-import logo from "../../public/pngtree-picture-of-a-blue-bird-on-a-black-background-image_2937385.jpg";
-import Like from "../../public/favorite-icon.svg";
-import StarIcon from "../../public/star-icon-blank.svg";
-import DifficultyIcon from "../../public/difficulty-level-icon.svg";
-import TimeIcon from "../../public/time-icon.svg";
+import logo from "../../../public/pngtree-picture-of-a-blue-bird-on-a-black-background-image_2937385.jpg";
+import Like from "../../../public/favorite-icon.svg";
+import StarIcon from "../../../public/star-icon-blank.svg";
+import DifficultyIcon from "../../../public/difficulty-level-icon.svg";
+import TimeIcon from "../../../public/time-icon.svg";
 import classNames from "classnames";
 import { Recipe } from "@/types/Recipe";
 import dayjs from "dayjs";
 
-interface RecipeCardProps extends ComponentPropsWithoutRef<"div"> {
+export interface RecipeCardProps extends ComponentPropsWithoutRef<"div"> {
   recipe: Recipe;
 }
 
@@ -69,7 +69,9 @@ export const RecipeCard: FC<RecipeCardProps> = async ({
               key={index}
             />
           ))}
-        <span className="text-black pl-2">{getDifficulty(difficulty)}</span>
+        <span className="text-black text-lg pl-2">
+          {getDifficulty(difficulty)}
+        </span>
       </div>
       <div
         className={classNames(

@@ -94,3 +94,17 @@ body{
   background-size: contain;
   aspect-ratio: 1440/277;
 }
+
+.fourth-section-divider::before {
+  content:"";
+  position: absolute;
+  transform: translateY(-1px);
+  top: 0;
+  left: -3px;
+  padding: 0;
+  width: 102%;
+  background: url(/third-section-divider.svg) no-repeat ;
+  background-position: bottom;
+  background-size: contain;
+  aspect-ratio: 1440/248.86;
+}
