@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import Logo from "../../../public/logo-black.svg";

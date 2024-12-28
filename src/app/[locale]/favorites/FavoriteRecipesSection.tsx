@@ -1,17 +1,14 @@
-import { FC } from "react";
-import { SortBar } from "./SortBar";
-
-import { RecipesPagination } from "../../recipes/RecipesPagination";
-
+import { SortBar } from "@/components/home/recipes/SortBar";
+import { RecipesPagination } from "@/components/recipes/RecipesPagination";
 import { OptionsType } from "@/types/OptionsType";
 import { getTranslations } from "next-intl/server";
-import { PropsWithSearchParams } from "@/app/[locale]/page";
+import { FC } from "react";
+import { PropsWithSearchParams } from "../page";
 
-export const AllRecipes: FC<PropsWithSearchParams> = async ({
+export const FavoriteRecipesSection: FC<PropsWithSearchParams> = async ({
   searchParams,
 }) => {
   const t = await getTranslations("Recipe");
-
   const options: OptionsType = {
     difficulty: t("Difficulty"),
     title: t("Title"),
@@ -19,7 +16,7 @@ export const AllRecipes: FC<PropsWithSearchParams> = async ({
     date: t("Date"),
   };
   return (
-    <div className=" bg-orange100 ">
+    <div>
       <SortBar options={options} defaultSort="date" />
       <RecipesPagination searchParams={searchParams} />
     </div>

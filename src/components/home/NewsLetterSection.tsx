@@ -3,7 +3,7 @@ import { lora } from "@/fonts/LoraFont";
 import { prompt } from "@/fonts/PromptFont";
 import classNames from "classnames";
 import Image from "next/image";
-import React, { FC } from "react";
+import { FC } from "react";
 import { Button } from "../controls/buttons/OrangeButton";
 
 export const NewsLetterSection: FC = () => (

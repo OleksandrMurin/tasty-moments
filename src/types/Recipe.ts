@@ -1,4 +1,4 @@
-import {RecipeRating} from "./RecipeRating";
+
 
 export interface Recipe {
     id: string;

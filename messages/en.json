@@ -22,5 +22,10 @@
   },
   "SortBar": {
     "Sort by": "Sort by"
+  },
+  "NotFound": {
+    "heading": "Oops! Page is not found",
+    "text": "The page is missing or you pasted incorrect link",
+    "link to home": "return to Homepage"
   }
 }

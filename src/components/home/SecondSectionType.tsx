@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { ComponentPropsWithoutRef, FC, ReactNode } from "react";
+import { ComponentPropsWithoutRef, FC, ReactNode } from "react";
 import { lora } from "@/fonts/LoraFont";
 
 interface Props extends ComponentPropsWithoutRef<"div"> {

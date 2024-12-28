@@ -1,4 +1,6 @@
-import type {Config} from "tailwindcss";
+import type { Config } from "tailwindcss";
+
+
 
 const config: Config = {
   content: [
@@ -8,6 +10,26 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        slideLeft:"slideLeft 1s ease-in-out forwards",
+        slideRight:"slideRight 1s ease-in-out forwards",
+      },
+      keyframes:{
+        slideLeft: {
+          '0%': {transform:"translateX(0)"},
+          '100%': {transform:"translateX(-100vw)"}
+        },
+        slideRight: {
+          '0%': {transform:"translateX(-100vw)"},
+          '100%': {transform:"translateX(0)"}
+        }
+      },
+      fontFamily: {
+        lato: ['"Lato"', 'sans-serif'],
+        lora: ['"Lora"', 'serif'],
+        mulish: ['"Mulish"', 'sans-serif'],
+        prompt: ['"Prompt"', 'sans-serif'],
+      },
       colors: {
         'orange100':'#FFC295',
         'orange200':'#F28738',

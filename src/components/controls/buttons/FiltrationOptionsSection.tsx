@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import {
   FiltrationOption,
   FiltrationOptionButton,
@@ -13,7 +13,7 @@ interface Props {
   options: FiltrationOption[];
 }
 
-const FiltrationOptionsSection: FC<Props> = ({
+export const FiltrationOptionsSection: FC<Props> = ({
   sectionName,
   sectionParams,
   options,
@@ -40,5 +40,3 @@ const FiltrationOptionsSection: FC<Props> = ({
     </div>
   );
 };
-
-export default FiltrationOptionsSection;

@@ -1,12 +1,13 @@
-import classNames from "classnames";
-import React, { ComponentPropsWithoutRef, FC } from "react";
-import Star from "@public/star-icon.svg";
-import { Swiper } from "@/components/controls/swiper/Swiper";
-import { prompt } from "@/fonts/PromptFont";
-import { RecipeCard } from "@/components/recipes/RecipeCard";
 import { get } from "@/api";
+import { Swiper } from "@/components/controls/swiper/Swiper";
+import { FailedToFetch } from "@/components/layout/FailedToFetch";
+import { RecipeCard } from "@/components/recipes/RecipeCard";
+import { prompt } from "@/fonts/PromptFont";
 import { PageModel } from "@/types/PageModel";
 import { Recipe } from "@/types/Recipe";
+import Star from "@public/star-icon.svg";
+import classNames from "classnames";
+import { ComponentPropsWithoutRef, FC } from "react";
 
 type Props = ComponentPropsWithoutRef<"div">;
 
@@ -40,7 +41,7 @@ const PopularRecipes: FC<Props> = async (props) => {
           ))}
         />
       ) : (
-        <div> "Error"</div>
+        <FailedToFetch />
       )}
     </div>
   );

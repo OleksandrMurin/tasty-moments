@@ -1,9 +1,9 @@
-import React, { ButtonHTMLAttributes, FC } from "react";
 import { prompt } from "@/fonts/PromptFont";
 import classNames from "classnames";
+import { ButtonHTMLAttributes, FC } from "react";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "gradient-orange";
   textSize?: "B1" | "B2";
   colorIntensity?: "200" | "400" | "600";
 }
@@ -32,6 +32,7 @@ export const Button: FC<Props> = ({
           colorIntensity == "200" && variant == "secondary",
         "bg-cream400 text-orange400":
           colorIntensity == "400" && variant == "secondary",
+        "bg-gradient-1 text-cream200 rounded-md": variant == "gradient-orange",
       },
       className
     )}

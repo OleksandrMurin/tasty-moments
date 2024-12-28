@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { lora } from "@/fonts/LoraFont";
 import { prompt } from "@/fonts/PromptFont";
 import classNames from "classnames";

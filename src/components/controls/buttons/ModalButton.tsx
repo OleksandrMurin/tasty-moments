@@ -2,14 +2,13 @@
 import classNames from "classnames";
 import CloseIcon from "@public/close-icon.svg";
 import { createPortal } from "react-dom";
-import React, {
+import {
   Dispatch,
   FC,
   ReactNode,
   SetStateAction,
   useEffect,
   useRef,
-  useState,
 } from "react";
 
 interface ButtonProps {
@@ -76,7 +75,7 @@ export const ModalWindow: FC<ModalProps> = ({
           ></div>
           <div
             className={classNames(
-              "fixed max-h- left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 pl-10 pr-16 rounded-lg  z-50",
+              "fixed max-h- left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 max-h-[95vh] pl-10 pr-16 rounded-lg overflow-y-auto z-50",
               { hidden: !isActive },
               className
             )}

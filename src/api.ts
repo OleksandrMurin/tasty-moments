@@ -8,7 +8,7 @@ enum Method {
     Delete = "DELETE"
 }
 interface DataAndParams {
-    data?: Object,
+    data?: object,
     params?: URLSearchParams
 }
 
@@ -17,7 +17,7 @@ export const sendRequest = async (url: string, method: Method, DataAndParams?: D
     let input = `${baseUrl}${url}`;
     if (DataAndParams?.params)
         input += `?${DataAndParams.params}`
-    let init: RequestInit = {
+    const init: RequestInit = {
         method,
         headers: {
             "Content-Type": "application/json",

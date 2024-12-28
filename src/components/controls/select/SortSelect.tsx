@@ -1,13 +1,16 @@
 "use client";
 
-import { FC, useMemo } from "react";
-import { Select, SelectProps } from "./Select";
 import { useQueryParam } from "@/hooks/useQueryParam";
+import dynamic from "next/dynamic";
+import { FC, useMemo } from "react";
+import { SelectProps } from "./Select";
 
 interface Props extends SelectProps {
   defaultValue: string;
 }
-
+const NoSSR = dynamic(async () => (await import("./Select")).Select, {
+  ssr: false,
+});
 export const SortSelect: FC<Props> = ({ defaultValue, ...props }) => {
   const acceptableValue = useMemo(
     () =>
@@ -26,8 +29,10 @@ export const SortSelect: FC<Props> = ({ defaultValue, ...props }) => {
     const option = x as { value: string };
     return setOption(option.value);
   };
-  const value = (props.options as { value: string }[]).find(
-    (o) => o.value === option
+  const value = useMemo(
+    () =>
+      (props.options as { value: string }[]).find((o) => o.value === option),
+    [props.options]
   );
-  return <Select value={value} onChange={onChange} {...props} />;
+  return <NoSSR value={value} onChange={onChange} {...props} />;
 };

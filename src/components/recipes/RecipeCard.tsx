@@ -1,4 +1,4 @@
-import React, { ComponentPropsWithoutRef, FC } from "react";
+import { ComponentPropsWithoutRef, FC } from "react";
 import { getLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { Lora } from "next/font/google";

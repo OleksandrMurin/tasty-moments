@@ -1,11 +1,11 @@
-import React, { FC } from "react";
-import SortIcon from "@public/sort-icon.svg";
-import { SearchBar } from "@components/controls/search/SearchBar";
-import { useTranslations } from "next-intl";
 import { OptionsType } from "@/types/OptionsType";
+import { SearchBar } from "@components/controls/search/SearchBar";
 import { SortSelect } from "@components/controls/select/SortSelect";
-import { FiltrationButton } from "./FiltrationButton";
+import SortIcon from "@public/sort-icon.svg";
+import { useTranslations } from "next-intl";
 
+import { FC } from "react";
+import { FiltrationButton } from "./FiltrationButton";
 interface Props {
   options: OptionsType;
   defaultSort: string;
@@ -23,6 +23,7 @@ export const SortBar: FC<Props> = ({ options, defaultSort }) => {
         <span className="uppercase text-xl text-orange600 pr-4">
           {t("Sort by")}
         </span>
+
         <SortSelect
           isSearchable={false}
           defaultValue={defaultSort}

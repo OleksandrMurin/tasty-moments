@@ -1,9 +1,9 @@
-import React, { FC } from "react";
-import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import Logo from "../../../public/logo.svg";
-import LoginIcon from "../../../public/login-icon.svg";
+import { useTranslations } from "next-intl";
+import { FC } from "react";
 import Like from "../../../public/like.svg";
+import LoginIcon from "../../../public/login-icon.svg";
+import Logo from "../../../public/logo.svg";
 import { AddRecipeButton } from "../controls/buttons/AddRecipeButton";
 
 const Header: FC = () => {
@@ -22,9 +22,12 @@ const Header: FC = () => {
           <Link href="/my_recipes">{t("My recipes")}</Link>
         </nav>
         <div className="flex items-center justify-between">
-          <Like className="m-2" />
+          <Link href="/favorites" className="">
+            <Like className="m-2" />
+          </Link>
+
           <LoginIcon className="m-2" />
-          <Link href="/" className="uppercase text-xl">
+          <Link href="/sign_in" className="uppercase text-xl">
             {t("Sign in")}
           </Link>
         </div>

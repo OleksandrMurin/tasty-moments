@@ -3,10 +3,11 @@ import {
   ModalButton,
   ModalWindow,
 } from "@/components/controls/buttons/ModalButton";
-import React, { FC, useState } from "react";
 import Filter from "@public/filter-icon.svg";
-import FiltrationOptionsSection from "@/components/controls/buttons/FiltrationOptionsSection";
+import { FC, useState } from "react";
+
 import { FiltrationOption } from "@/components/controls/buttons/FiltrationOptionButton";
+import { FiltrationOptionsSection } from "@/components/controls/buttons/FiltrationOptionsSection";
 import { Button } from "@/components/controls/buttons/OrangeButton";
 
 // interface Props {
@@ -54,6 +55,10 @@ export const FiltrationButton: FC = () => {
           />
           <FiltrationOptionsSection
             sectionName="Types of poop"
+            options={optionsArray}
+          />
+          <FiltrationOptionsSection
+            sectionName="Types of kakij"
             options={optionsArray}
           />
           <div className="flex justify-end pb-12 pt-2">

@@ -1,5 +1,3 @@
-import React from "react";
-
 import SSIcon1 from "../../../public/SSIcon1.svg";
 import SSIcon2 from "../../../public/SSIcon2.svg";
 import SSIcon3 from "../../../public/SSIcon3.svg";

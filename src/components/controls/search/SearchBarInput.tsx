@@ -1,15 +1,15 @@
-import React, { ChangeEventHandler, FC } from "react";
+import classNames from "classnames";
+import { ComponentPropsWithoutRef, FC } from "react";
 
-interface Props {
-  onChange: ChangeEventHandler<HTMLInputElement>;
-}
+type Props = ComponentPropsWithoutRef<"input">;
 
-export const SearchBarInput: FC<Props> = ({ onChange }) => {
-  return (
-    <input
-      onChange={onChange}
-      placeholder="Search"
-      className="bg-cream200 focus:outline-none text-xl w-11/12"
-    ></input>
-  );
-};
+export const SearchBarInput: FC<Props> = (props) => (
+  <input
+    placeholder="Search"
+    {...props}
+    className={classNames(
+      "bg-cream200 focus:outline-none text-xl w-11/12",
+      props.className
+    )}
+  />
+);

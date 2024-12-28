@@ -3,12 +3,7 @@
 import classNames from "classnames";
 import { lato } from "@/fonts/LatoFont";
 import SelectedOptionIcon from "@public/selected-option-orange-icon.svg";
-import React, {
-  ComponentPropsWithoutRef,
-  FC,
-  ReactNode,
-  useState,
-} from "react";
+import { ComponentPropsWithoutRef, FC, useState } from "react";
 
 interface FiltrationOptionProps extends ComponentPropsWithoutRef<"button"> {
   option: FiltrationOption;
