@@ -4,7 +4,7 @@ import { prompt } from "@/fonts/PromptFont";
 import classNames from "classnames";
 import Image from "next/image";
 import { FC } from "react";
-import { Button } from "../controls/buttons/OrangeButton";
+import { Button } from "../controls/buttons/Button";
 
 export const NewsLetterSection: FC = () => (
   <div className="flex flex-row justify-between bg-cream400 relative fourth-section-divider">
@@ -40,10 +40,7 @@ export const NewsLetterSection: FC = () => (
           placeholder="Enter your email"
           className="h-14 border outline-none rounded-l-md border-warm-grey200 text-xl w-2/3 text-left px-4 focus:border-orange200 focus:border-r-0"
         ></input>
-        <Button className="rounded-r-md" colorIntensity="200">
-          {" "}
-          Join
-        </Button>
+        <Button className="rounded-r-md"> Join</Button>
       </div>
     </div>
     <Image

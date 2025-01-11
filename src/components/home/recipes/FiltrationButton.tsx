@@ -3,9 +3,9 @@ import { ModalWindow } from "@/components/controls/buttons/ModalWindow";
 import Filter from "@public/filter-icon.svg";
 import { FC, useCallback, useState } from "react";
 
+import { Button } from "@/components/controls/buttons/Button";
 import { FiltrationOption } from "@/components/controls/buttons/FiltrationOptionButton";
 import { FiltrationOptionsSection } from "@/components/controls/buttons/FiltrationOptionsSection";
-import { Button } from "@/components/controls/buttons/OrangeButton";
 
 // interface Props {
 //   isActive: boolean;

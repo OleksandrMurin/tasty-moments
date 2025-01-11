@@ -1,13 +1,8 @@
 import { usePathname, useRouter } from "@/i18n/routing";
 import { useSearchParams } from "next/navigation";
-import { Dispatch, SetStateAction, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-type useQueryParam<T> = (
-    name: string,
-    defaultValue: T,
-    acceptableValues?: T[] 
-  ) => [T, Dispatch<SetStateAction<T>>];
-  
+
  export const useQueryParam = <T extends string | number>(name: string, defaultValue: T, acceptableValues?: T[]) => {
   const router = useRouter();
   const pathname = usePathname();

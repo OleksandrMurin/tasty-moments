@@ -9,11 +9,12 @@ import "dayjs/locale/en";
 import "dayjs/locale/uk";
 import duration from "dayjs/plugin/duration"; // ES 2015
 import relativeTime from "dayjs/plugin/relativeTime";
+import { NextFont } from "next/dist/compiled/@next/font";
 
 dayjs.extend(duration);
 dayjs.extend(relativeTime);
 
-export interface RootLayoutProps {
+interface RootLayoutProps {
   children: ReactNode;
   params: Promise<{ locale: string }>;
 }
@@ -33,15 +34,10 @@ export const metadata = {
 
 const RootLayout: FC<RootLayoutProps> = async ({ children, params }) => {
   const { locale } = await params;
-  let mainFont = lato;
-  switch (locale) {
-    case "uk":
-      mainFont = mulish;
-      break;
-
-    default:
-      mainFont = lato;
-  }
+  const mainFonts: Record<string, NextFont> = {
+    uk: mulish,
+  };
+  const mainFont = mainFonts[locale] || lato;
 
   return (
     <html lang={locale} className="">

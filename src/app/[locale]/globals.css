@@ -120,8 +120,7 @@
   transform: translateY(-99%);
   left: -1px;
   width: calc(100% + 2px);
-  background: url(/dashed-line.png) no-repeat;
-  background-position: bottom;
+  background: url(/dashed-line.png) no-repeat bottom;
   background-size: contain;
   aspect-ratio: 72/11;
 }
@@ -134,8 +133,7 @@
   padding: 0;
   transform: translateY(-99%);
   width: calc(100% + 5px);
-  background: url(/dividerSecond.png) no-repeat;
-  background-position: bottom;
+  background: url(/dividerSecond.png) no-repeat bottom;
   background-size: contain;
   aspect-ratio: 1440/277;
 }
@@ -148,9 +146,7 @@
   left: -1px;
   padding: 0;
   width: calc(100% + 2px);
-  background: url(/dividerThird.svg) no-repeat;
-  background-position: bottom;
-
+  background: url(/dividerThird.svg) no-repeat bottom;
   background-size: cover;
   aspect-ratio: 1442/220;
 }

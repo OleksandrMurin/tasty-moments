@@ -15,7 +15,6 @@ export const Button: FC<Props> = ({
 }) => (
   <button
     {...props}
-    disabled={disabled}
     aria-disabled={disabled}
     className={classNames(
       "py-[13px] px-[50px] ",

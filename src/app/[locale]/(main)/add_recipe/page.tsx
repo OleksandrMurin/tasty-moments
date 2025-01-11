@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { useTranslations } from "next-intl";
 
 const AddRecipe = () => {
-  const t = useTranslations("SignInPage");
+  const t = useTranslations("AddRecipe");
   return (
     <div className={classNames("p-96")}>
       <ReturnToHomepageButton

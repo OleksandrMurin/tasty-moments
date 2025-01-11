@@ -47,5 +47,8 @@
   "FetchError": {
     "Description": "We cannot load recipes. Please reload the page or try again later",
     "ApologizeText": "Oops! There is something wrong"
+  },
+  "AddRecipe": {
+    "Return to homepage": "Return to homepage"
   }
 }
