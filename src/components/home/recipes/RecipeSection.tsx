@@ -1,8 +1,9 @@
 import { FC } from "react";
 
-import PopularRecipes from "./PopularRecipes";
 import { AllRecipes } from "./AllRecipes";
-import { PropsWithSearchParams } from "@/app/[locale]/page";
+
+import { PropsWithSearchParams } from "@/types/PropsWithSearchParams";
+import { PopularRecipes } from "./PopularRecipes";
 
 export const RecipeSection: FC<PropsWithSearchParams> = async ({
   searchParams,

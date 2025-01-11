@@ -1,8 +1,8 @@
 "use client";
 
-import classNames from "classnames";
 import { lato } from "@/fonts/LatoFont";
 import SelectedOptionIcon from "@public/selected-option-orange-icon.svg";
+import classNames from "classnames";
 import { ComponentPropsWithoutRef, FC, useState } from "react";
 
 interface FiltrationOptionProps extends ComponentPropsWithoutRef<"button"> {
@@ -17,12 +17,12 @@ export const FiltrationOptionButton: FC<FiltrationOptionProps> = ({
   option: { optionName, optionParams },
 }) => {
   const [isActive, setIsActive] = useState(false);
-  const onclick = () => {
-    setIsActive(() => !isActive);
+  const onClick = () => {
+    setIsActive((prev) => !prev);
   };
   return (
     <button
-      onClick={onclick}
+      onClick={onClick}
       className={classNames(
         "px-8 h-12 py-3 bg-cream200 font-normal text-xl text-warm-grey600 rounded-lg border border-warm-grey200 flex gap-3 justify-center items-center",
         {

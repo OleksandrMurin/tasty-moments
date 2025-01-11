@@ -1,4 +1,7 @@
 "use client";
+import ArrowLeft from "@public/arrow-left.svg";
+import ArrowRight from "@public/arrow-right.svg";
+import classNames from "classnames";
 import {
   ComponentPropsWithoutRef,
   FC,
@@ -6,19 +9,16 @@ import {
   useCallback,
   useMemo,
 } from "react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 import {
   Swiper as SwiperComponent,
   SwiperSlide,
   useSwiper,
 } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Pagination } from "swiper/modules";
-import ArrowRight from "../../../../public/arrow-right.svg";
-import ArrowLeft from "../../../../public/arrow-left.svg";
 import styles from "./Swiper.module.css";
-import classNames from "classnames";
 
 interface SliderProps {
   slides: ReactNode[];

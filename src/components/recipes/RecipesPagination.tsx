@@ -2,9 +2,10 @@ import { FC } from "react";
 import { RecipeCard } from "./RecipeCard";
 
 import { getRecipes } from "@/actions/fetchRecipes";
-import { PropsWithSearchParams } from "@/app/[locale]/page";
+
+import { PropsWithSearchParams } from "@/types/PropsWithSearchParams";
 import { PaginationBar } from "../controls/pagination/PaginationBar";
-import { FailedToFetch } from "../layout/FailedToFetch";
+import { FetchError } from "../layout/FetchError";
 
 export const RecipesPagination: FC<PropsWithSearchParams> = async ({
   searchParams,
@@ -19,7 +20,7 @@ export const RecipesPagination: FC<PropsWithSearchParams> = async ({
             <RecipeCard recipe={i} key={i.id} className="w-full" />
           ))
         ) : (
-          <FailedToFetch />
+          <FetchError />
         )}
       </div>
       <div className="flex justify-center py-5">

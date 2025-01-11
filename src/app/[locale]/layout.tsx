@@ -1,7 +1,5 @@
-import Footer from "@/components/layout/Footer";
 import { Lato } from "next/font/google";
 import { FC, ReactNode } from "react";
-import Header from "../../components/layout/Header";
 import "./globals.css";
 
 import { mulish } from "@/fonts/MulishFont";
@@ -15,7 +13,7 @@ import relativeTime from "dayjs/plugin/relativeTime";
 dayjs.extend(duration);
 dayjs.extend(relativeTime);
 
-interface RootLayoutProps {
+export interface RootLayoutProps {
   children: ReactNode;
   params: Promise<{ locale: string }>;
 }
@@ -36,10 +34,15 @@ export const metadata = {
 const RootLayout: FC<RootLayoutProps> = async ({ children, params }) => {
   const { locale } = await params;
   let mainFont = lato;
-  if (locale == "en") {
-    mainFont = lato;
+  switch (locale) {
+    case "uk":
+      mainFont = mulish;
+      break;
+
+    default:
+      mainFont = lato;
   }
-  if (locale == "uk") mainFont = mulish;
+
   return (
     <html lang={locale} className="">
       <body
@@ -49,9 +52,7 @@ const RootLayout: FC<RootLayoutProps> = async ({ children, params }) => {
         )}
       >
         <div className="overflow-y-scroll overflow-x-hidden">
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
+          {children}
 
           <div id="modal-portal"></div>
         </div>

@@ -1,10 +1,10 @@
 "use client";
 
 import { useQueryParam } from "@/hooks/useQueryParam";
+import Arrow from "@public/button-arrow-left.svg";
 import DoubleArrow from "@public/button-double-arrow-left.svg";
 import classNames from "classnames";
 import { FC, useCallback, useMemo } from "react";
-import Arrow from "../../../../public/button-arrow-left.svg";
 import { PaginationButton } from "./PaginationButton";
 
 interface Props {

@@ -1,49 +1,19 @@
 "use client";
-import classNames from "classnames";
 import CloseIcon from "@public/close-icon.svg";
+import classNames from "classnames";
+import { FC, MouseEventHandler, ReactNode, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
-import {
-  Dispatch,
-  FC,
-  ReactNode,
-  SetStateAction,
-  useEffect,
-  useRef,
-} from "react";
 
-interface ButtonProps {
-  className: string;
-  children: ReactNode;
-  isActive: boolean;
-  setIsActive: Dispatch<SetStateAction<boolean>>;
-}
 interface ModalProps {
   isActive: boolean;
-  setIsActive: Dispatch<SetStateAction<boolean>>;
+  toggleCallback: MouseEventHandler;
   children: ReactNode;
   className?: string;
 }
 
-export const ModalButton: FC<ButtonProps> = ({
-  children,
-  className,
-  isActive,
-  setIsActive,
-}) => {
-  return (
-    <>
-      <button
-        className={className}
-        onClick={() => setIsActive((prev: boolean) => !prev)}
-      >
-        {children}
-      </button>
-    </>
-  );
-};
 export const ModalWindow: FC<ModalProps> = ({
   isActive,
-  setIsActive,
+  toggleCallback,
   children,
   className,
 }) => {
@@ -71,7 +41,7 @@ export const ModalWindow: FC<ModalProps> = ({
               "w-screen h-screen bg-black fixed left-0 top-0 opacity-80 ",
               { hidden: !isActive }
             )}
-            onClick={() => setIsActive((prev) => !prev)}
+            onClick={toggleCallback}
           ></div>
           <div
             className={classNames(
@@ -81,7 +51,7 @@ export const ModalWindow: FC<ModalProps> = ({
             )}
           >
             <div className="flex justify-end pb-8 pt-6">
-              <CloseIcon onClick={() => setIsActive((prev) => !prev)} />
+              <CloseIcon onClick={toggleCallback} />
             </div>
 
             {children}

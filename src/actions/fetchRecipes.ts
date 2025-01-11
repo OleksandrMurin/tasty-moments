@@ -3,8 +3,9 @@
 import { get } from "@/api";
 import { PageModel } from "@/types/PageModel";
 import { Recipe } from "@/types/Recipe";
+import { SearchParams } from "@/types/SearchParams";
 
-export const getRecipes = async (searchParams: { [key: string]: string | string[] | undefined }): Promise<PageModel<Recipe> | null> => {
+export const getRecipes = async (searchParams: SearchParams): Promise<PageModel<Recipe> | null> => {
   if(searchParams["page"]){
     searchParams["page"] = (+searchParams["page"]-1).toString()
   }  

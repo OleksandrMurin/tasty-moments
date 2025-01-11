@@ -1,9 +1,9 @@
 "use client";
+import { useQueryParam } from "@/hooks/useQueryParam";
+import Divider from "@public/devider.svg";
+import SearchIcon from "@public/search-icon.svg";
 import { ChangeEventHandler } from "react";
 import { SearchBarInput } from "./SearchBarInput";
-import Divider from "../../../../public/devider.svg";
-import SearchIcon from "../../../../public/search-icon.svg";
-import { useQueryParam } from "@/hooks/useQueryParam";
 
 export const SearchBar = () => {
   const [search, setSearch] = useQueryParam<string>("search", "");

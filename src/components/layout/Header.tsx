@@ -1,9 +1,9 @@
 import { Link } from "@/i18n/routing";
+import Like from "@public/like.svg";
+import LoginIcon from "@public/login-icon.svg";
+import Logo from "@public/logo.svg";
 import { useTranslations } from "next-intl";
 import { FC } from "react";
-import Like from "../../../public/like.svg";
-import LoginIcon from "../../../public/login-icon.svg";
-import Logo from "../../../public/logo.svg";
 import { AddRecipeButton } from "../controls/buttons/AddRecipeButton";
 
 const Header: FC = () => {
@@ -27,7 +27,7 @@ const Header: FC = () => {
           </Link>
 
           <LoginIcon className="m-2" />
-          <Link href="/sign_in" className="uppercase text-xl">
+          <Link href="/auth/login" className="uppercase text-xl">
             {t("Sign in")}
           </Link>
         </div>

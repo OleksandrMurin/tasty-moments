@@ -1,16 +1,16 @@
-import { ComponentPropsWithoutRef, FC } from "react";
-import { getLocale } from "next-intl/server";
+import { Recipe } from "@/types/Recipe";
+import DifficultyIcon from "@public/difficulty-level-icon.svg";
+import Like from "@public/favorite-icon.svg";
+import logo from "@public/pngtree-picture-of-a-blue-bird-on-a-black-background-image_2937385.jpg";
+import StarIcon from "@public/star-icon-blank.svg";
+import TimeIcon from "@public/time-icon.svg";
+import classNames from "classnames";
+import dayjs from "dayjs";
 import { useTranslations } from "next-intl";
+import { getLocale } from "next-intl/server";
 import { Lora } from "next/font/google";
 import Image from "next/image";
-import logo from "../../../public/pngtree-picture-of-a-blue-bird-on-a-black-background-image_2937385.jpg";
-import Like from "../../../public/favorite-icon.svg";
-import StarIcon from "../../../public/star-icon-blank.svg";
-import DifficultyIcon from "../../../public/difficulty-level-icon.svg";
-import TimeIcon from "../../../public/time-icon.svg";
-import classNames from "classnames";
-import { Recipe } from "@/types/Recipe";
-import dayjs from "dayjs";
+import { ComponentPropsWithoutRef, FC } from "react";
 
 export interface RecipeCardProps extends ComponentPropsWithoutRef<"div"> {
   recipe: Recipe;
@@ -34,14 +34,9 @@ export const RecipeCard: FC<RecipeCardProps> = async ({
   const dateTime = dayjs.duration(avgCookingTime).locale(locale).humanize();
 
   const getDifficulty = (difficulty: number) => {
-    const difficulties = {
-      1: t("Easy"),
-      2: t("Medium"),
-      3: t("Hard"),
-    };
-    if (difficulty <= 1) return difficulties[1];
-    if (difficulty >= 3) return difficulties[3];
-    return difficulties[2];
+    if (difficulty <= 1) return t("Easy");
+    if (difficulty >= 3) return t("Hard");
+    return t("Medium");
   };
   return (
     <div className={classNames(" bg-cream400 rounded-lg shadow-lg", className)}>

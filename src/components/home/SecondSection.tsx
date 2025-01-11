@@ -1,11 +1,11 @@
-import SSIcon1 from "../../../public/SSIcon1.svg";
-import SSIcon2 from "../../../public/SSIcon2.svg";
-import SSIcon3 from "../../../public/SSIcon3.svg";
-import SSIcon4 from "../../../public/SSIcon4.svg";
+import { prompt } from "@/fonts/PromptFont";
+import SSIcon1 from "@public/SSIcon1.svg";
+import SSIcon2 from "@public/SSIcon2.svg";
+import SSIcon3 from "@public/SSIcon3.svg";
+import SSIcon4 from "@public/SSIcon4.svg";
 import classNames from "classnames";
 import { AddRecipeButton } from "../controls/buttons/AddRecipeButton";
-import { prompt } from "@/fonts/PromptFont";
-import { SecondSectionCard, SecondSectionCardType } from "./SecondSectionType";
+import { SecondSectionCard, SecondSectionCardType } from "./SecondSectionCard";
 
 export const SecondSection = () => {
   const cards: Array<SecondSectionCardType> = [

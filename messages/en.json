@@ -26,6 +26,26 @@
   "NotFound": {
     "heading": "Oops! Page is not found",
     "text": "The page is missing or you pasted incorrect link",
-    "link to home": "return to Homepage"
+    "link to home": "return to Homepage",
+    "Return to homepage": "Return to homepage"
+  },
+  "SignInPart": {
+    "Return to homepage": "Return to homepage"
+  },
+  "SignInPage": {
+    "Return to homepage": "Return to homepage"
+  },
+  "FavoritesPage": {
+    "Return to homepage": "Return to homepage"
+  },
+  "FailedToFetch": {
+    "We cannot load recipes": {
+      " Please reload the page or try again later": "We cannot load recipes. Please reload the page or try again later"
+    },
+    "Something gone wrong": "Oops! There is something wrong"
+  },
+  "FetchError": {
+    "Description": "We cannot load recipes. Please reload the page or try again later",
+    "ApologizeText": "Oops! There is something wrong"
   }
 }

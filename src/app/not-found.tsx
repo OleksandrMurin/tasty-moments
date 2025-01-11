@@ -1,4 +1,4 @@
-import { ReturnToHomepage } from "@/components/controls/buttons/ReturnToHomepage";
+import { ReturnToHomepageButton } from "@/components/controls/buttons/ReturnToHomepage";
 import { lato } from "@/fonts/LatoFont";
 import { prompt } from "@/fonts/PromptFont";
 
@@ -20,7 +20,9 @@ const NotFound = () => {
       <span className={classNames("text-4xl", lato.className)}>
         {t("text")}
       </span>
-      <ReturnToHomepage className="pt-9" />
+      <ReturnToHomepageButton textClassName="pt-9">
+        {t("Return to homepage")}
+      </ReturnToHomepageButton>
     </div>
   );
 };

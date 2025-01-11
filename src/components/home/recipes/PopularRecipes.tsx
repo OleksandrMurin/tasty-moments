@@ -1,6 +1,6 @@
 import { get } from "@/api";
 import { Swiper } from "@/components/controls/swiper/Swiper";
-import { FailedToFetch } from "@/components/layout/FailedToFetch";
+import { FetchError } from "@/components/layout/FetchError";
 import { RecipeCard } from "@/components/recipes/RecipeCard";
 import { prompt } from "@/fonts/PromptFont";
 import { PageModel } from "@/types/PageModel";
@@ -12,7 +12,7 @@ import { ComponentPropsWithoutRef, FC } from "react";
 type Props = ComponentPropsWithoutRef<"div">;
 
 //TODO : Unhandled error
-const PopularRecipes: FC<Props> = async (props) => {
+export const PopularRecipes: FC<Props> = async (props) => {
   const fetch = async (): Promise<PageModel<Recipe> | null> => {
     const urlSearchParams = new URLSearchParams();
     urlSearchParams.set("page", "0");
@@ -41,10 +41,8 @@ const PopularRecipes: FC<Props> = async (props) => {
           ))}
         />
       ) : (
-        <FailedToFetch />
+        <FetchError />
       )}
     </div>
   );
 };
-
-export default PopularRecipes;

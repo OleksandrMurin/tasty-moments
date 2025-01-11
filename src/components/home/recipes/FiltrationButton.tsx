@@ -1,10 +1,7 @@
 "use client";
-import {
-  ModalButton,
-  ModalWindow,
-} from "@/components/controls/buttons/ModalButton";
+import { ModalWindow } from "@/components/controls/buttons/ModalWindow";
 import Filter from "@public/filter-icon.svg";
-import { FC, useState } from "react";
+import { FC, useCallback, useState } from "react";
 
 import { FiltrationOption } from "@/components/controls/buttons/FiltrationOptionButton";
 import { FiltrationOptionsSection } from "@/components/controls/buttons/FiltrationOptionsSection";
@@ -34,18 +31,15 @@ export const FiltrationButton: FC = () => {
     { optionName: "salads" },
   ];
   const [isActive, setIsActive] = useState(false);
+  const toggleIsActive = useCallback(() => setIsActive((prev) => !prev), []);
   return (
     <div>
-      <ModalButton
-        className="bg-cream400 p-4 rounded"
-        isActive={isActive}
-        setIsActive={setIsActive}
-      >
+      <button className="bg-cream400 p-4 rounded" onClick={toggleIsActive}>
         <Filter />
-      </ModalButton>
+      </button>
       <ModalWindow
         isActive={isActive}
-        setIsActive={setIsActive}
+        toggleCallback={toggleIsActive}
         className="bg-cream400"
       >
         <div>
@@ -62,12 +56,8 @@ export const FiltrationButton: FC = () => {
             options={optionsArray}
           />
           <div className="flex justify-end pb-12 pt-2">
-            <Button variant="secondary" colorIntensity="400">
-              Reset
-            </Button>
-            <Button colorIntensity="400" className="rounded-lg">
-              Selected X results
-            </Button>
+            <Button variant="secondary">Reset</Button>
+            <Button className="rounded-lg">Selected X results</Button>
           </div>
         </div>
       </ModalWindow>

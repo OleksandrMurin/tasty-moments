@@ -1,9 +1,9 @@
-import { FC } from "react";
-import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import Logo from "../../../public/logo-black.svg";
-import LoginIcon from "../../../public/log-out-icon-black.svg";
-import ArrowUp from "../../../public/arrow-up.svg";
+import ArrowUp from "@public/arrow-up.svg";
+import LoginIcon from "@public/log-out-icon-black.svg";
+import Logo from "@public/logo-black.svg";
+import { useTranslations } from "next-intl";
+import { FC } from "react";
 import { AddRecipeButton } from "../controls/buttons/AddRecipeButton";
 
 const Footer: FC = () => {

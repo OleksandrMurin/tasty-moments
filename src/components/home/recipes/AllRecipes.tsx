@@ -3,9 +3,9 @@ import { SortBar } from "./SortBar";
 
 import { RecipesPagination } from "../../recipes/RecipesPagination";
 
+import { PropsWithSearchParams } from "@/app/[locale]/(main)/page";
 import { OptionsType } from "@/types/OptionsType";
 import { getTranslations } from "next-intl/server";
-import { PropsWithSearchParams } from "@/app/[locale]/page";
 
 export const AllRecipes: FC<PropsWithSearchParams> = async ({
   searchParams,
