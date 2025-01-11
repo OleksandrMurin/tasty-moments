@@ -1,0 +1,51 @@
+{
+  "DishCard": {
+    "Easy": "Легка",
+    "Hard": "Важка",
+    "Medium": "Середня"
+  },
+  "Header": {
+    "All recipes": "Усі рецепти",
+    "Sign in": "Вхід",
+    "Add recipe": "Додати рецепт",
+    "Home": "Головна",
+    "My recipes": "Мої рецепти",
+    "Go on top": "Повернутися догори",
+    "Contact us": "Контакти",
+    "Favorites": "Обране"
+  },
+  "Recipe": {
+    "Difficulty": "Складність",
+    "Title": "Назва",
+    "Rating": "Оцінка",
+    "Date": "Дата"
+  },
+  "SortBar": {
+    "Sort by": "Сортувати за"
+  },
+  "NotFound": {
+    "heading": "Ой-йой! Сторінку не знайдено",
+    "text": "Сторінка відсутня, або ви перейшли за некоректним посиланням",
+    "link to home": "повернутися на Головну",
+    "Return to homepage": "Повернутися на головну сторінку"
+  },
+  "SignInPart": {
+    "Return to homepage": "Повернутися на головну сторінку"
+  },
+  "SignInPage": {
+    "Return to homepage": "Повернутися на головну сторінку"
+  },
+  "FavoritesPage": {
+    "Return to homepage": "Повернутися на головну сторінку"
+  },
+  "FailedToFetch": {
+    "Something gone wrong": "Упс! Щось не пішло так"
+  },
+  "FetchError": {
+    "ApologizeText": "Упс! Щось пішло не так",
+    "Description": "Ми не можемо завантажити рецепти. Перезавантажте сторінку або повторіть спробу пізніше"
+  },
+  "AddRecipe": {
+    "Return to homepage": "Повернутися на головну"
+  }
+}
